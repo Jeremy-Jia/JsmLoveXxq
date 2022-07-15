@@ -8,19 +8,28 @@
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="meplayer.css">
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
     <script src="js/vue.min.js" language="JavaScript"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/html2canvas.min.js" async="async"></script>
+    
     <style>
       img {
         border-radius: 10px;
       }
     </style>
   </head>
-
+  <body>
+    <div class="container">
+        <div class="music"></div>
+        <button type="button">切换主题</button>
+    </div>
+    <script src="../dist/meplayer.min.js"></script>
+    <script src="main.js"></script>
+    </body>
   <body class="is-preload">
     <!-- Loader -->
     <link rel="stylesheet" href="assets/css/loader.css" />
@@ -77,10 +86,7 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
               framespacing="0" 
               allowfullscreen="true"> 
               </iframe>
-              
-              
-
-              
+                            
               <button
                 class="button small fit"
                 @click="showAbout"
@@ -265,7 +271,7 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
             {
               title: "Page 4",
               texts: ["Another Demo"],
-              html: '<a onclick="todonate()" style="color:#fff; background-color:#f0a1a8; border-radius: 0.3em; padding: 0.2em; cursor: pointer;"><<u>Donate!</u>></a><br /><p style="color:#ccc; font-size:0.7em;">Last updated: Apr. 14, 2021<p>',
+              html: '<a onclick="tolove()" style="color:#fff; background-color:#f0a1a8; border-radius: 0.3em; padding: 0.2em; cursor: pointer;"><u>有彩蛋~</u></a><br /><p style="color:#ccc; font-size:0.7em;">Last updated: Apr. 14, 2021<p>',
               imgs: [""],
             },
             {

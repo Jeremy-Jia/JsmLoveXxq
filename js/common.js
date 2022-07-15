@@ -35,11 +35,11 @@ function toIndex(){
 	window.location.href=mainsec.fromurl;
 }
 //using in index to direct to donate page
-function todonate(){
+function tolove(){
 	var u = "index.html"+(getQueryVariable("page")?"?page="+getQueryVariable("page"):"");
 	u = encodeURIComponent(u);
 	// mainsec.rotateCard(90,0.5,"Y");
-	window.location.href="donate.html?from="+u;
+	window.location.href="love.html?from="+u;
 }
 //self run function to show the back button
 (function(){
