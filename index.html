@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>宝宝我爱你</title>
+    <title>2022.9.2</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="meplayer.css">
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
     /></noscript>
@@ -18,19 +17,10 @@
     
     <style>
       img {
-        border-radius: 10px;
+        border-radius: 20px;
       }
     </style>
   </head>
-  <body>
-    <div class="container">
-        <div class="music"></div>
-        <button type="button">切换主题</button>
-    </div>
-    <script src="../dist/meplayer.min.js"></script>
-    <script src="main.js"></script>
-    </body>
-  <body class="is-preload">
     <!-- Loader -->
     <link rel="stylesheet" href="assets/css/loader.css" />
     <div class="loader">
@@ -86,15 +76,23 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
               framespacing="0" 
               allowfullscreen="true"> 
               </iframe>
-                            
+ 
               <button
                 class="button small fit"
                 @click="showAbout"
                 v-bind:disabled="onTransition==1"
               >
-              <a href="musics/Beautiful.mp3">Play the sound</a>
+              开始
               </button>
+              <!-- <audio 
+              autoplay="autoplay" 
+              controls="controls"
+              loop="loop" 
+              preload="auto"
+              src="musics/Beautiful.mp3">
+            </audio> -->
             </div>
+
             <div
               v-for="item in contacts"
               v-if="item.show"
@@ -221,7 +219,7 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
             },
             {
               name: "XZ",
-              icon: "icon brands fa-qq",
+              icon: "icon brands fa-bitcoin",
               desc: "XZ",
               content:  "https://ast.sina.cn/fate/h5.d.html?from=wap&date=day&astro=Virgo&from=wap#/",
               show: false,
@@ -229,7 +227,7 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
             },
             {
               name: "XCF",
-              icon: "icon brands fa-github",
+              icon: "icon brands fa-airbnb",
               desc: "XCF",
               content: "https://mip.xiachufang.com/",
               show: false,
@@ -237,7 +235,7 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
             },
             {
               name: "CD",
-              icon: "icon brands fa-github",
+              icon: "icon brands fa-android",
               desc: "CD",
               content: "https://www.tommyton.com/",
               show: false,
@@ -261,13 +259,13 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
               html: "<h2>HTML Support</h2>",
               imgs: [""],
             },
-            // {
-            //   //title: "Page 3",
-            //   //texts: ["Multi images"],
-            //   //imgs: ["images/bg.jpg", "images/demoQR.png"],
+             {
+               title: "Page 3",
+               texts: ["Multi images"],
+               imgs: ["images/bg.jpg", "images/demoQR.png"],
 
-            //   //html: "",
-            // },
+               html: "",
+            },
             {
               title: "Page 4",
               texts: ["Another Demo"],
