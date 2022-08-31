@@ -17,7 +17,7 @@
     
     <style>
       img {
-        border-radius: 20px;
+        border-radius: 225px;
       }
     </style>
   </head>
@@ -30,7 +30,6 @@
         <p>萌萌</p>  
       </div>
     </div>
-
     <!-- Wrapper -->
     <div id="wrapper">
       <!-- Main -->
@@ -47,7 +46,7 @@
           "
           v-show="backButton"
           ><button class="button small" @click="screenShot" id="screenshot">
-            保存网页截图
+            Save shotcut
           </button></span
         >
 
@@ -56,10 +55,9 @@
           <span class="avatar"
             ><img
               src="images/avatar.jpg"
-              alt=""
               style="width: 122px; height: 122px"
           /></span>
-          <h1>宝宝我爱你</h1>
+          <h1>Our Home~</h1>
           <transition-group name="fade">
             <div v-show="defaults" key="text">
               <pre>
@@ -82,23 +80,42 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
                 @click="showAbout"
                 v-bind:disabled="onTransition==1"
               >
-              宝贝，遇见你是我最大的幸运
+              Greatest luck to meet you
               </button>
-              <!-- <audio 
-              autoplay="autoplay" 
-              controls="controls"
-              loop="loop" 
-              preload="auto"
-              src="musics/Beautiful.mp3">
-            </audio> -->
-            </div>
+                <!-- <textarea name="" id=""></textarea>
+                <button>发布</button>
+                <ul>
+                </ul>
+                <script>
+                //获取元素
+                var btn = document.querySelector('button');
+                var text = document.querySelector('textarea');
+                var ul = document.querySelector('ul');
+                //注册时间
+                btn.onclick = function(){
+                  if(text.value == ''){
+                    alert("您没有输入内容。")
+                    return false;
+                  }else{
+                    var li = document.createElement('li');
+                    li.innerHTML = text.value;
+                    //ul.appendChild(li);
+                    ul.insertBefore(li,ul.children[0])
+                  }
+                  text.value='';
+                }
+            </script> -->
+             
+            <a href="Mailto:test@163.com">Mail</a> 
 
+            </div>
             <div
               v-for="item in contacts"
               v-if="item.show"
               key="item.name"
               v-html="item.content"
             ></div>
+            
             <button
               class="button small"
               key="button"
@@ -106,7 +123,7 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
               style="opacity: 0.55"
               v-show="backButton"
             >
-              回家
+              Way back home
             </button>
           </transition-group>
         </header>
@@ -120,7 +137,6 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
             </li>
           </ul>
         </footer>
-
         <!-- Page container -->
         <header v-show="info">
           <transition-group name="fade">
@@ -139,14 +155,14 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
                 v-bind:disabled="(nowPage < startPage || onTransition==1)"
                 @click="navigate(-1)"
               >
-                生日快乐宝贝~
+              Happy birthday my baby
               </button>
               <button
                 class="button small"
-                v-bind:disabled="(nowPage >= endPage - 2 || onTransition==1)"
+                v-bind:disabled="(nowPage >= endPage - 1 || onTransition==1)"
                 @click="navigate(1)"
               >
-                爱你到永远~
+              Love you forever
               </button>
             </div>
             <hr key="br" />
@@ -156,16 +172,14 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
               class="button fit"
               v-bind:disabled="onTransition==1"
             >
-              way back home
+              Way Back Home~
             </button>
           </transition-group>
         </header>
       </section>
-
       <!-- Footer -->
       <footer id="footer"></footer>
     </div>
-
     <!-- Scripts -->
     <script>
       if ("addEventListener" in window) {
@@ -191,23 +205,13 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
           imgs: [], // Image url of a page's images
 
           startPage: 1, // First page of the website
-          endPage: 3, // The last page of the website
+          endPage: 5, // The last page of the website
 
           defaults: 1, // Show welcome message
           Contacts: 1, // Detect if to show contacts
           info: 0, // If to show designed pages
           deg: 0, // Main section rotate deg
-
           backButton: false,
-
-          /*          Change things below this line               */
-          //Contact info
-          /**
-           * 有关下方icon的优化
-           * 因下方icon可以挂上用户自己的站点，所以做了如下修改
-           * jump为true，会直接跳转链接，链接为用户自定义的content字段
-           * jump为false，则是与原来一样。
-           */
           contacts: [
             {
               name: "Wechat",
@@ -242,7 +246,6 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
               jump: true,
             },
           ],
-
           //Pages content
           page: [
             {
@@ -250,21 +253,17 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
               texts: [
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore facere accusamus quae nesciunt at fuga dicta vitae quidem reiciendis. Quos blanditiis corporis vel iusto reprehenderit ratione distinctio fugiat quae sed.",
               ],
-              html: "",
               imgs: ["images/1.jpg"],
             },
             {
               title: "Page 2",
               texts: ["Some text", "And some text"],
-              html: "<h2>HTML Support</h2>",
               imgs: ["images/2.jpg"],
             },
              {
                title: "Page 3",
                texts: ["Multi images"],
                imgs: ["images/3.jpg"],
-
-               html: "",
             },
             {
               title: "Page 4",
@@ -273,13 +272,12 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
               imgs: ["images/4.jpg"],
             },
             {
-              title: "Eastern egg page!",
-              texts: ["Can only access with ?page=#"],
-              html: "<a href='https://github.com/Jiaocz/Personal-page' target='_blank'>Origin project</a>",
+              title: "Page 5",
+              texts: ["Another Demo"],
+              html: '<a onclick="tolove()" style="color:#fff; background-color:#f0a1a8; border-radius: 0.3em; padding: 0.2em; cursor: pointer;"><u>有彩蛋~</u></a><br /><p style="color:#ccc; font-size:0.7em;">Last updated: Aug. 14, 2022<p>',
+              imgs: ["images/4.jpg"],
             },
           ],
-          /*            Change ends here                 */
-
           nowPage: 0, // Pointer to current page
           onTransition: 0, //If the transition animation is on
         },
