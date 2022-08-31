@@ -14,10 +14,10 @@
     <script src="js/vue.min.js" language="JavaScript"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/html2canvas.min.js" async="async"></script>
-    
+    <!-- 你名字笔画28我名字笔画30，加起来58 -->
     <style>
       img {
-        border-radius: 225px;
+        border-radius: 58px;
       }
     </style>
   </head>
@@ -55,7 +55,7 @@
           <span class="avatar"
             ><img
               src="images/avatar.jpg"
-              style="width: 122px; height: 122px"
+              style="width: 128px; height: 128px"
           /></span>
           <h1>Our Home~</h1>
           <transition-group name="fade">
@@ -67,6 +67,7 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
 💕生日快乐💕
               </pre> 
               <iframe 
+              style="width:258px;height:188px;background-color:white;border-radius:58px;"
               src="https://player.bilibili.com/player.html?aid=258281681&bvid=BV1Ma411Q7r4&cid=769752324&page=1" 
               scrolling="no" 
               border="0" 
@@ -74,13 +75,14 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
               framespacing="0" 
               allowfullscreen="true"> 
               </iframe>
- 
               <button
                 class="button small fit"
                 @click="showAbout"
+                style="width:258px;height:50px;background-color:white;border-radius:58px;"
                 v-bind:disabled="onTransition==1"
               >
-              Greatest luck to meet you
+              Greatest luck to meet you~
+              <a href="Mailto:734209511@qq.com">📧</a> 
               </button>
                 <!-- <textarea name="" id=""></textarea>
                 <button>发布</button>
@@ -105,7 +107,7 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
                   text.value='';
                 }
             </script> -->
-            <a href="Mailto:734209511@qq.com">📧</a> 
+            
             </div>
             <div
               v-for="item in contacts"
@@ -117,7 +119,7 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
               class="button small"
               key="button"
               @click="hideContact(true)"
-              style="opacity: 0.55"
+              style="opacity: 0.58"
               v-show="backButton"
             >
               Way back home
@@ -149,13 +151,15 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
             <div key="buttons">
               <button
                 class="button small"
+                style="background-color:white;border-radius:58px;"
                 v-bind:disabled="(nowPage < startPage || onTransition==1)"
                 @click="navigate(-1)"
               >
-              Happy birthday my baby
+              Happy birthday baby
               </button>
               <button
                 class="button small"
+                style="background-color:white;border-radius:58px;"
                 v-bind:disabled="(nowPage >= endPage - 1 || onTransition==1)"
                 @click="navigate(1)"
               >
@@ -167,6 +171,7 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
               @click="returnToContact"
               key="button"
               class="button fit"
+              style="width:258px;height:50px;background-color:white;border-radius:58px;"
               v-bind:disabled="onTransition==1"
             >
               Way Back Home~
@@ -202,7 +207,7 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
           imgs: [], // Image url of a page's images
 
           startPage: 1, // First page of the website
-          endPage: 5, // The last page of the website
+          endPage: 4, // The last page of the website
 
           defaults: 1, // Show welcome message
           Contacts: 1, // Detect if to show contacts
@@ -246,31 +251,23 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
           //Pages content
           page: [
             {
-              title: "Page 1",
-              texts: [
-                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore facere accusamus quae nesciunt at fuga dicta vitae quidem reiciendis. Quos blanditiis corporis vel iusto reprehenderit ratione distinctio fugiat quae sed.",
-              ],
-              imgs: ["images/1.jpg"],
+              title: "吃饭",
+              texts: ["我们一起吃饭的时候，真的超级开心。"],
+              imgs: ["images/8.jpg"],
             },
             {
-              title: "Page 2",
-              texts: ["Some text", "And some text"],
-              imgs: ["images/2.jpg"],
+              title: "睡觉",
+              texts: ["我们第一次在外面，真是天下最好的看手。"],
+              imgs: ["images/5.jpg"],
             },
              {
-               title: "Page 3",
-               texts: ["Multi images"],
+               title: "电影",
+               texts: ["我们一起看电影，在电影院包场的感觉真好。"],
                imgs: ["images/3.jpg"],
             },
             {
-              title: "Page 4",
-              texts: ["Another Demo"],
-              html: '<a onclick="tolove()" style="color:#fff; background-color:#f0a1a8; border-radius: 0.3em; padding: 0.2em; cursor: pointer;"><u>有彩蛋~</u></a><br /><p style="color:#ccc; font-size:0.7em;">Last updated: Aug. 14, 2022<p>',
-              imgs: ["images/4.jpg"],
-            },
-            {
-              title: "Page 5",
-              texts: ["Another Demo"],
+              title: "逛街",
+              texts: ["宝贝，我真的好开心，你呢~"],
               html: '<a onclick="tolove()" style="color:#fff; background-color:#f0a1a8; border-radius: 0.3em; padding: 0.2em; cursor: pointer;"><u>有彩蛋~</u></a><br /><p style="color:#ccc; font-size:0.7em;">Last updated: Aug. 14, 2022<p>',
               imgs: ["images/4.jpg"],
             },
@@ -383,7 +380,7 @@ H̠̄Ā̠P̠̄P̠̄Ȳ̠︎︎ B̠̄Ī̠R̠̄T̠̄H̠̄D̠̄Ā̠Ȳ̠
     <style>
       .fade-enter-active,
       .fade-leave-active {
-        transition: all 0.5s;
+        transition: all 0.65s;
       }
       .fade-enter,
       .fade-leave-to {
